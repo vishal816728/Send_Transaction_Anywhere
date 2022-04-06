@@ -1,0 +1,32 @@
+1    install hardhat
+2    create a smart contract
+3    deploy.js
+4  hardhat config with these setting
+     module.exports = {
+  solidity: "0.8.4",
+  networks:{
+    rinkeby:{
+      url:"https://eth-rinkeby.alchemyapi.io/v2/Nqtor9dR6hf_iPJDrw_995GixLp-ftus",
+      accounts:['82f88e523497e0bae7866d16bd6a258538e33dd0bd24318d49f9b4ee558ada7b']
+    }
+  }
+};
+
+url is coming from alchemy
+
+6 npx hardhat run scripts/deploy.js --network rinkeby
+
+7  in src create new folder utils inside utils create constanst.js
+  inside it paste contract address
+  and create a copy od Transaction.json from artifact
+
+
+8 import the Transaction file into contants.js file 
+   get the abi from Transaction using Transaction.abi 
+
+   now we have everything to interact with our smart contract from using
+
+9  Now we will create context file in context file which will be central file to talk to smart contract and send the data to rest of the components
+
+10 import that provider file from context into main.jsx
+       
